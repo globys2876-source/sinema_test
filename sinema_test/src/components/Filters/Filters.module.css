@@ -1,0 +1,32 @@
+.filters {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) auto;
+  gap: 14px;
+  align-items: end;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin: 16px 0 24px;
+}
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field span { font-size: 13px; color: var(--muted); }
+.field select {
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--text);
+  padding: 10px 12px;
+  font-size: 14px;
+  outline: none;
+}
+.reset { display: flex; }
+
+@media (max-width: 768px) {
+  .filters { grid-template-columns: 1fr 1fr; }
+  .reset { grid-column: 1 / -1; }
+  .reset :global(.btn) { width: 100%; }
+}
+@media (max-width: 375px) {
+  .filters { grid-template-columns: 1fr; }
+}

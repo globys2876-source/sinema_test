@@ -1,0 +1,26 @@
+.search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0 12px;
+}
+.icon { color: var(--muted); }
+.search input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text);
+  padding: 11px 0;
+  font-size: 15px;
+}
+.clear {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-size: 15px;
+}
+.clear:hover { color: var(--text); }

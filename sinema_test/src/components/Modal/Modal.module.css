@@ -1,0 +1,42 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 500;
+  animation: fade 0.2s ease;
+}
+.modal {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow);
+}
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  background: var(--bg-card);
+}
+.head h3 { margin: 0; font-size: 18px; }
+.close {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-size: 18px;
+}
+.close:hover { color: var(--text); }
+.content { padding: 20px; }
+
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }

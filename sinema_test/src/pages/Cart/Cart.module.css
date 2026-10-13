@@ -1,0 +1,47 @@
+.list { display: flex; flex-direction: column; gap: 14px; }
+.item {
+  display: flex;
+  gap: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px;
+  align-items: center;
+}
+.poster { width: 70px; height: 100px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+.info { flex: 1; min-width: 0; }
+.info h3 { margin: 0 0 6px; font-size: 17px; }
+.meta, .seats, .unit { margin: 2px 0; font-size: 13px; color: var(--muted); }
+.seats { color: var(--accent-2); }
+.controls { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+.counter { display: flex; align-items: center; gap: 10px; }
+.counter button {
+  width: 30px; height: 30px; border-radius: 7px;
+  border: 1px solid var(--line); background: var(--bg-elev); color: var(--text); font-size: 16px;
+}
+.counter button:disabled { opacity: 0.4; }
+.counter span { min-width: 20px; text-align: center; font-weight: 700; }
+.sum { font-weight: 700; color: var(--accent-2); font-size: 16px; }
+.remove { background: transparent; border: none; color: var(--accent); font-size: 13px; }
+.remove:hover { text-decoration: underline; }
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.total { display: flex; align-items: center; gap: 24px; margin-left: auto; }
+.total strong { color: var(--text); }
+.grand strong { color: var(--accent-2); font-size: 20px; }
+
+@media (max-width: 600px) {
+  .item { flex-wrap: wrap; }
+  .controls { flex-direction: row; width: 100%; justify-content: space-between; align-items: center; }
+  .total { flex-wrap: wrap; gap: 12px; width: 100%; }
+  .total :global(.btn) { width: 100%; }
+}

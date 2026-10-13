@@ -1,0 +1,25 @@
+.hero {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  padding: 60px 40px;
+  margin-bottom: 20px;
+  background:
+    radial-gradient(1200px 400px at 80% -10%, rgba(255, 77, 94, 0.35), transparent),
+    radial-gradient(900px 400px at 10% 120%, rgba(255, 176, 32, 0.25), transparent),
+    var(--bg-card);
+  border: 1px solid var(--line);
+}
+.heroText { max-width: 560px; }
+.heroText h1 { font-size: 40px; margin: 0 0 14px; line-height: 1.15; }
+.heroText p { color: var(--muted); font-size: 17px; margin: 0 0 24px; }
+
+@media (max-width: 768px) {
+  .hero { padding: 40px 24px; }
+  .heroText h1 { font-size: 28px; }
+  .heroText p { font-size: 15px; }
+}
+@media (max-width: 375px) {
+  .hero { padding: 30px 18px; }
+  .heroText h1 { font-size: 23px; }
+}
